@@ -1,0 +1,58 @@
+http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n={2}&aggr=1&cr=1&loginUin={3}&format=json&inCharset=GB2312&outCharset=utf-8&notice=0&platform=jqminiframe.json&needNewCode=0&p={1}&catZhida=0&remoteplace=sizer.newclient.next_song&w={0}
+{0}=需要搜索的歌曲或歌手
+{1}=查询的页码数
+{2}=当前页的返回数量
+{3}=默认为0,是登录的QQ号ID
+ 
+
+歌曲地址：http://ws.stream.qqmusic.qq.com/460866.m4a?fromtag=46
+
+
+歌词地址：
+http://music.qq.com/miniportal/static/lyric/{0}/{1}.xml
+{0}为歌曲id对100取模
+{1}为歌曲id
+
+
+  QString url="http://s.music.qq.com/fcgi-bin/music_search_new_platform?t=0&n=15&aggr=1&cr=1&loginUin=0&format=json&inCharset=GB2312&outCharset=utf-8&notice=0&platform=jqminiframe.json&needNewCode=0&p=5&catZhida=0&remoteplace=sizer.newclient.next_song&w="+searchContent;
+
+
+     QScriptEngine engine;
+       QScriptValue sc =  engine.evaluate("value=" + byteArray);
+       if(sc.isObject())
+       {
+          // Mes("sc");
+           QScriptValue data=sc.property("data");
+           QScriptValue song=data.property("song");
+           if(song.isObject())
+            {
+         //      Mes("song");
+               QScriptValue songlist=song.property("list");
+                if(songlist.isArray())
+                 {
+               //     Mes("list");
+                      QScriptValueIterator it(songlist);
+                      it.next();//迭代器第一个为空
+                      while(it.hasNext())
+                      {
+                           QString id=it.value().property("f").toString();//得到歌曲id后进一步获取信息
+                            it.next();
+
+                               QRegExp rx("^\\d+\\|(\\w+)\\|\\w+\\|(\\w+)\\|\\w+.*$");
+
+                             int pos = id.indexOf(rx);
+                             if ( pos >= 0 )
+                                {
+                                   idList[nCount1]=rx.cap(1);
+                                 //  musicList[nCound1].
+                                   nCount1++;
+                                   
+                                 //     Mes();
+                                 //     Mes(rx.cap(2));
+                                }
+
+                             
+                       }
+                }
+           }
+       }

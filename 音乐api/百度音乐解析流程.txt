@@ -1,0 +1,46 @@
+一.音乐播放及下载
+http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.6.5.0&method=baidu.ting.search.merge&format=json&query=你要搜索的关键字&page_no=1&page_size=50&type=-1&data_source=0&use_cluster=1
+
+得到一个下面格式的特别长的json
+{"error_code":22000,"result":{"artist_info":{...},"album_info":{,,,},"query":"光年之外","song_info":{"song_list":[{"resource_type_ext":"0",...],...},...}}
+之后解析这个json文件。1.解析result	2.解析song_info		3.解析song_list
+ok，此时会得到一个数组，数组里包含了歌曲信息，不过有些不全有些冗余，所以我们在这一步只要保存好歌曲id即可，key为song_id。这个json文件的功能就到此结束
+下面根据每一个id去获取它的详细信息
+接口为：http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.6.5.0&method=baidu.ting.song.play&songid=上面得到的id
+之后又得到一个大致格式如下的json文件
+{"songinfo":{"special_type":0,"pic_huge":...},...,bitrate:{...}}
+这个就很简单了，只有2层嵌套，所以只需要解析songinfo与bitrate后再依次获取各个信息 (注：bitrate与songinfo是处于同一层下)
+根据songinfo一般要获取的信息关键字有：
+title：歌曲名
+author：歌手名
+album_title ：专辑名
+lrclink ：歌词地址
+pic_huge/pic_big :歌曲封面图。huge是超大图，如果没有再用pic_big
+ting_uid歌手id(如果你想获取歌手详细信息的话就保存下id)
+
+
+根据bitrate一般要获取的信息关键字有：
+file_link :音乐播放及下载地址
+file_duration :音乐长度
+
+二.获取歌手详细信息
+http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.6.5.0&method=baidu.ting.artist.getInfo&tinguid=上面得到的歌手id
+然后得到一个下面格式的json
+{"weight":"47.00",..,"intro":"...","aliasname":"","country":"香港",...}
+这个没有嵌套就很简单了，信息都在里面了主要就是intro介绍的比较详细
+
+三.获取列表歌曲
+http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.6.5.0&method=baidu.ting.billboard.billList&type=1&size=10&offset=0
+
+参数：	type = 1-新歌榜,2-热歌榜,11-摇滚榜,12-爵士,16-流行,21-欧美金曲榜,22-经典老歌榜,23-情歌对唱榜,24-影视金曲榜,25-网络歌曲榜
+
+	size = 10 //返回条目数量
+
+	offset = 0 //获取偏移
+
+之后解析与第1个一样
+
+
+
+
+

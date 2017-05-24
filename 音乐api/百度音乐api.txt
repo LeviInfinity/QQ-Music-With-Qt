@@ -1,0 +1,80 @@
+百度音乐
+ http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.6.5.0&method=baidu.ting.search.catalogSug&format=json&query=要搜索的内容
+
+2.关键字搜索（包括歌曲，专辑，歌手，伴奏）
+http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.6.5.0&method=baidu.ting.search.merge&format=json&query=内容&page_no=1&page_size=50&type=-1&data_source=0&use_cluster=1 
+
+
+
+http://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.6.5.0&method=
+百度音乐全接口
+http://tingapi.ting.baidu.com/v1/restserver/ting
+
+获取方式：GET
+
+参数：format=json或xml&calback=&from=webapp_music&method=以下不同的参数获得不同的数据
+
+PS：format根据开发需要可选择json或xmml，其他参数对应填入，calback是等于空的。
+
+
+一、获取列表
+
+例：method=baidu.ting.billboard.billList&type=1&size=10&offset=0
+参数：	type = 1-新歌榜,2-热歌榜,11-摇滚榜,12-爵士,16-流行,21-欧美金曲榜,22-经典老歌榜,23-情歌对唱榜,24-影视金曲榜,25-网络歌曲榜
+size = 10 //返回条目数量
+offset = 0 //获取偏移
+
+
+三、搜索
+
+例：method=baidu.ting.search.catalogSug&query=海阔天空
+
+参数：query = '' //搜索关键字
+
+四、播放
+
+例：method=baidu.ting.song.play&songid=877578
+
+例：method=baidu.ting.song.playAAC&songid=877578
+
+参数：songid = 877578 //歌曲id
+五、LRC歌词
+
+例：method=baidu.ting.song.lry&songid=877578
+
+参数：songid = 877578 //歌曲id
+
+六、推荐列表
+
+例：method=baidu.ting.song.getRecommandSongList&song_id=877578&num=5
+
+参数：	song_id = 877578
+
+num = 5//返回条目数量
+
+七、下载
+
+例：method=baidu.ting.song.downWeb&songid=877578&bit=24&_t=1393123213
+
+参数：	songid = 877578//歌曲id
+
+bit = 24, 64, 128, 192, 256, 320 ,flac//码率
+
+_t = 1430215999,, //时间戳
+
+八、获取歌手信息
+
+例：method=baidu.ting.artist.getInfo&tinguid=877578
+
+参数：	tinguid = 877578 //歌手ting id
+
+九、获取歌手歌曲列表
+
+例：method=baidu.ting.artist.getSongList&tinguid=877578&limits=6&use_cluster=1&order=2
+
+参数：	tinguid = 877578//歌手ting id
+
+limits = 6//返回条目数量
+
+其他就不用管了
+

@@ -1,0 +1,63 @@
+QCheckBox{
+    spacing: 2px;
+    color: white;
+}
+QCheckBox::indicator {
+    width: 45px;
+    height: 30px;
+}
+QCheckBox::indicator:unchecked {
+    image: url(:/playControl/love_empty);
+}
+QCheckBox::indicator:unchecked:hover {
+    image: url(:/playControl/love_empty);
+}
+QCheckBox::indicator:unchecked:pressed {
+    image: url(::/playControl/love_empty);
+}
+QCheckBox::indicator:checked {
+    image: url(:/playControl/love_full);
+}
+QCheckBox::indicator:checked:hover {
+    image: url(:/playControl/love_full);
+}
+QCheckBox::indicator:checked:pressed {
+    image: url(:/playControl/love_empty);
+}
+
+QCheckBox#loop{
+    spacing: 2px;
+    color: white;
+}
+QCheckBox#loop::indicator {
+    width: 45px;
+    height: 30px;
+}
+QCheckBox#loop::indicator:unchecked {
+    image: url(:/playControl/loop);
+}
+QCheckBox#loop::indicator:unchecked:hover {
+    image: url(:/playControl/loop);
+}
+QCheckBox#loop::indicator:pressed {
+    image: url(:/playControl/loop);
+}
+QCheckBox#loop::indicator:checked {
+    image: url(:/playControl/loop1);
+}
+QCheckBox#loop::indicator:checked:hover {
+    image: url(:/playControl/loop1);
+}
+QCheckBox#loop::indicator:checked:pressed {
+    image: url(:/playControl/loop1);
+}
+QCheckBox#loop::indicator:partiallychecked {
+    image: url(:/playControl/random);
+}
+QCheckBox#loop::indicator:partiallychecked:hover {
+    image: url(:/playControl/random);
+}
+QCheckBox#loop::indicator:partiallychecked:pressed {
+    image: url(:/playControl/random);
+}
+

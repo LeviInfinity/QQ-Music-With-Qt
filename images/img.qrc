@@ -1,0 +1,105 @@
+<RCC>
+	<qresource prefix="/title">
+		<file alias="min">./title/min.png</file>
+		<file alias="min_hover">./title/min_hover.png</file>
+		<file alias="min_pressed">./title/min_pressed.png</file>
+		<file alias="close">./title/close.png</file>
+		<file alias="close_hover">./title/close_hover.png</file>
+		<file alias="close_pressed">./title/close_pressed.png</file>
+		<file alias="skin">./title/skin.png</file>
+		<file alias="skin_hover">./title/skin_hover.png</file>
+		<file alias="vip">./title/vip.png</file>
+		<file alias="vip_hover">./title/vip_hover.png</file>
+		<file alias="mail">./title/mail.png</file>
+		<file alias="mail_hover">./title/mail_hover.png</file>
+		<file alias="min_arrow">./title/min_arrow.png</file>
+		<file alias="min_arrow_hover">./title/min_arrow_hover.png</file>
+		<file alias="menu">./title/menu.png</file>
+		<file alias="menu_hover">./title/menu_hover.png</file>
+		<file alias="pin">./title/pin.png</file>
+		<file alias="search">./title/search.png</file>
+		<file alias="cloud">./title/cloud.png</file>
+		<file alias="cloud_hover">./title/cloud_hover.png</file>
+	</qresource>
+	
+	<qresource prefix="/playControl">
+		<file alias="play">./PlayControl/play.png</file>
+		<file alias="play_hover">./PlayControl/play_hover.png</file>
+		<file alias="play_click">./PlayControl/play_click.png</file>
+		<file alias="pause">./PlayControl/pause.png</file>
+		<file alias="pause_hover">./PlayControl/pause_hover.png</file>
+		<file alias="pause_click">./PlayControl/pause_click.png</file>
+		<file alias="left">./PlayControl/left.png</file>
+		<file alias="left_hover">./PlayControl/left_hover.png</file>
+		<file alias="left_click">./PlayControl/left_click.png</file>
+		<file alias="right">./PlayControl/right.png</file>
+		<file alias="right_hover">./PlayControl/right_hover.png</file>
+		<file alias="right_click">./PlayControl/right_click.png</file>
+		<file alias="loop1">./PlayControl/loop1.png</file>
+		<file alias="loop1_hover">./PlayControl/loop1_hover.png</file>
+		<file alias="random">./PlayControl/random.png</file>
+		<file alias="random_hover">./PlayControl/random_hover.png</file>
+		<file alias="loop">./PlayControl/loop.png</file>
+		<file alias="loop_hover">./PlayControl/loop_hover.png</file>
+		<file alias="love_empty">./PlayControl/love_empty.png</file>
+		<file alias="love_full">./PlayControl/love_full.png</file>
+		<file alias="download">./PlayControl/download.png</file>
+		<file alias="download_hover">./PlayControl/download_hover.png</file>
+		<file alias="volume">./PlayControl/volume.png</file>
+		<file alias="volume_hover">./PlayControl/volume_hover.png</file>
+		<file alias="menu">./PlayControl/menu.png</file>
+		<file alias="menu_hover">./PlayControl/menu_hover.png</file>
+		<file alias="lrc">./PlayControl/lrc.png</file>
+		<file alias="lrc_hover">./PlayControl/lrc_hover.png</file>
+		<file alias="down">./PlayControl/down.png</file>
+		<file alias="down_hover">./PlayControl/down_hover.png</file>
+	
+	</qresource>
+	
+	<qresource prefix="item">
+		<file alias="computer">./Item/computer.png</file>
+		<file alias="history">./Item/history.png</file>
+		<file alias="listen">./Item/listen.png</file>
+		<file alias="mobile">./Item/mobile.png</file>
+		<file alias="set">./Item/set.png</file>
+		<file alias="love">./Item/love.png</file>
+		<file alias="video">./Item/video.png</file>
+		<file alias="music">./Item/music.png</file>
+		<file alias="heart">./Item/heart.png</file>
+		<file alias="star">./Item/star.png</file>
+		<file alias="menu">./Item/menu.png</file>
+	</qresource>
+	
+	<qresource prefix="/center">
+		<file alias="download">./center/download.png</file>
+		<file alias="play">./center/play.png</file>
+		<file alias="add">./center/add.png</file>
+		<file alias="mylove">./center/mylovePic.png</file>
+		<file alias="information">./center/information.png</file>
+		<file alias="loading1">./center/01.png</file>
+		<file alias="loading2">./center/02.png</file>
+		<file alias="loading3">./center/03.png</file>
+		<file alias="loading4">./center/04.png</file>
+		<file alias="loading5">./center/05.png</file>
+		<file alias="loading6">./center/06.png</file>
+		<file alias="loading7">./center/07.png</file>
+		<file alias="loading8">./center/08.png</file>
+		
+
+	</qresource>
+	
+	<qresource prefix="/qss">
+		<file alias="center">./QSS/center.qss</file>
+		<file alias="check">./QSS/check.qss</file>
+		<file alias="introWidget">./QSS/introWidget.qss</file>
+		<file alias="list">./QSS/list.qss</file>
+		<file alias="style">./QSS/style.qss</file>
+	</qresource>
+	
+	<qresource>
+		<file alias="logo">logo.png</file>
+		<file alias="off">off.png</file>
+		<file alias="on">on.png</file>
+		<file alias="yuan">yuan.png</file>		
+	</qresource>
+</RCC>

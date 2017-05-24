@@ -1,0 +1,52 @@
+QLabel
+{
+	color:rgb(80,80,80);
+	font-size:20px; 
+	font-weight:500;
+}
+QPushButton
+{
+	border:1px solid rgb(160,160,160);
+	width:100px;
+	height:28px;
+	color:rgb(60,60,60);
+}
+QPushButton:hover
+{
+	border:1px solid rgb(0,204,102);
+	width:100px;
+	height:35px;
+	color:rgb(160,160,160);
+}
+QPushButton:pressed
+{
+	border:1px solid rgb(0,160,50);
+	background-color:rgb(200,230,200);
+	width:100px;
+	height:35px;
+	color:rgb(60,60,60);
+}
+QLineEdit
+{
+	border-radius:12px;
+	border:1px solid rgb (220,220,200);
+	height:28px;
+	width:50px;
+}
+QTableWidget{
+            color: white;
+            gridline-color: white;
+            background: #2c2c2d;\
+            alternate-background: #3A3A3C;
+            selection-color: red;
+            selection-background-color: #595a5c;
+            border: 2px groove gray;
+            border-radius: 0px;
+            padding: 2px 4px;
+            }
+QScrollBar{
+	background:rgb(80,80,80); height:10px;
+}
+QScrollBar{
+	background:red; width:10px;
+}
