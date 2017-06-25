@@ -1,0 +1,67 @@
+<html>
+	<body>
+		<input type="button" value="Js教程" onclick="newDoc()">
+		<button onclick="onBack()">Back</button>
+		<button onclick="onConfirm()">Confirm</button>
+		<button onclick="onPrompt()">Prompt</button>
+		<button onclick='onCancel()'>关闭定时器</button>
+		<p id="qq"></p>
+		<script>
+			 var x1,x2;
+			 x1=screen.availWidth;
+			 document.write(x1)
+			 
+			 x2=window.innerWidth
+			 document.write("<p>"+x2+"</p>");
+			 
+			document.write(location.pathname);
+			document.write("<p>"+location.href+"</p>");
+			
+			 function newDoc()
+			{
+				window.location.assign("http://www.w3school.com.cn/js/index.asp")//加载一个新的页面
+			}
+			
+			function onBack()
+			{
+					window.history.back()  // forward 前进    相当于浏览器中的前进后退按钮
+					
+			}
+			function onConfirm()
+			{
+				if(confirm('Yes / No? '))
+					alert("you clicked ok");
+				else
+					alert('you clicked cancel');
+			}
+			function onPrompt()
+			{
+				var res = prompt("input QQ",'835126606')
+				if(res!=null)
+					document.getElementById('qq').innerHTML=res
+			}
+			//var t = setTimeout("onTimeOut()",1000);
+			//onTimeOut();
+			
+			function onTimeOut()
+			{
+				var today=new Date();
+				var h = today.getHours();
+				var m = today.getMinutes();
+				var s = today.getSeconds();
+				document.getElementById('qq').innerHTML = (h+":"+ m + ":"+s)
+				var t = setTimeout("onTimeOut()",1000);
+			}
+			function onCancel()
+			{
+				clearTimeout(t);
+			}
+			txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+			document.write(txt)
+			
+			
+			// appCodeName appName  appVersion cookieEnabled  platform  userAgent systemLanguage 
+			
+		</script>
+	</body>
+</html>
